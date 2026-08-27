@@ -1,0 +1,11 @@
+FROM ubuntu:26.04
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update; apt upgrade; apt install -y iproute2 arping iputils-ping nano software-properties-common; apt-add-repository universe \
+    ;apt install -y supervisor kea; apt-get clean; rm -rf /var/lib/apt/lists/* \
+    ;mkdir -p /var/lib/kea/ /run/kea/; chmod 750 /var/lib/kea/ /run/kea/
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY kea.yaml /etc/kea/kea-dhcp4.conf 
+
+CMD ["/usr/bin/supervisord"]
