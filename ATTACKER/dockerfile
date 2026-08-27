@@ -1,5 +1,0 @@
-FROM alpine:latest
-
-RUN apk upgrade ; apk update; apk add bash yersinia arping iputils-ping tcpdump
-
-CMD ["/bin/bash"]
