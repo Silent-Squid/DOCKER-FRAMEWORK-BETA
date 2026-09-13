@@ -16,17 +16,19 @@ En el directorio */Script* tenemos todos los archivos que nos van a hacer falta 
 1. lib-01.sh
 
 ## RunDocker.sh 
-Este va a ser el archivo donde se lanzarán los contenedores que se deseen
+Este va a ser el archivo donde se lanzarán los contenedores y switches que se deseen
 
 ## network.sh
-
+Este ca a ser el archivo donde sde configurarán las redes y los virtual-switches 
 ## Depuracion.sh
 Este archivo debe ser configurado para destruir los contenedores y los switches creados con RunDocker. Los veths asignados a los contenedores serán **automaticamente
 borrados** por el sistema.
 
 
-## Librerias: lib
-1. lib-01.sh
+## Libreria lib-01.sh
+Es una librería fundamental para el sistema de script, en ella están todas las funciones necesarias y que se utilizarán en los scripts creados con este sistema. De hecho, 
+lo más importante de este proyecto es la librería en sí, ya que todo lo demás son laboratorios.
+
 
 # DOCS De otras herramientas utilizadas: 
 Guía a markdown: 
