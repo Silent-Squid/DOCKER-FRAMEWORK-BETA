@@ -19,7 +19,7 @@ En el directorio */Script* tenemos todos los archivos que nos van a hacer falta 
 Este va a ser el archivo donde se lanzarán los contenedores y switches que se deseen
 
 ## network.sh
-Este ca a ser el archivo donde sde configurarán las redes y los virtual-switches 
+Este va a ser el archivo donde sde configurarán las redes y los virtual-switches 
 ## Depuracion.sh
 Este archivo debe ser configurado para destruir los contenedores y los switches creados con RunDocker. Los veths asignados a los contenedores serán **automaticamente
 borrados** por el sistema.
