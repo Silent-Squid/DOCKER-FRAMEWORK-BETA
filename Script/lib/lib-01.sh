@@ -6,7 +6,7 @@ random(){
 
 RunDocker(){
     printf "\nLaunching $1 ----- image $2\n"
-    #Donde $1 = nombre y $2 = imagen docker = $2 del sistema
+    #Donde $1 = nombre y $2 = imagen docker 
     docker run -it -d --network none --name $1 --cap-add=NET_ADMIN $2
 }
 
