@@ -6,6 +6,9 @@ Se puede considerar un Framework de trabajo, fue diseñado en 2 días en mis vac
 no está pensado para entornos de producción, ya que apenas tiene herramientas para auditar los laboratorios y carece de un sistema de logs y seguridad. El funcionamiento correcto
 es de responsabilidad exclusiva del usuario. 
 
+Las redes de momento solo soportan IPv4. Tal vez en un futuro me plantee diseñarlo también para IPv6 solo que para trabajar en laboratorios me parece un dolor de cabeza IPv6, aunque claro
+tiene mejoras singnificativas y va a haber casos en los que se trabajará en IPv6. Barajaré la opción.
+
 **¿Cuantos contenedores se pueden lanzar en un mismo archivo?**:
 
 La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, icluso lanzando 12 y configurando las redes de
@@ -51,6 +54,22 @@ Explicaré como funciona cada función de la librería
   - $2 ---- Contenedor
   - $3 ---- NombreIF
   - $4 ---- IP + NETMASK  OPTIONAL. Tambien es valido DHCP4 que por el momento no hace nada pero especifica y devuelve una variable indicando que el contenedor quiere DHCP4
+  - La funcion devuelve los siguientes datos:
+    -  dev: Nombre del dispositivo de red en el host
+    -  dev2: Nombre del dispositivo de red dentro del contenedor
+    -  DHCP4: Si el contenedor espera a tener DHCP o no. 
+- *makeifs()*
+: Es igual que makeif pero mucho más sencillo y sin devolver ningún echo
+
+- *MakeCLI()*
+: Es una función pensada para lanzar de manera masiva contenedores "clientes" con una configuración de red igual.
+
+  - $1 y $2 rango, del 1 al 5 MakeCLI 1 5 crea 5 contenedores (clientes)
+  - $3 Es la direccion de red sin el último dígito, es decir si la red es 192.168.0.0 debera escribirse 192.168.0.
+  - $4 Es el rango desde el que se empezará a colocar las IP, si colocas 9 empezará a partir de 10, esto está hecho para dejar siempre una IP para un servidor o cualquier otro dispositivo. 
+  - $5 Es la máscara de red colocado en el formato CIDR (/16, /24...)
+    - Un ejemplo de 3 clientes con a partir de la 192.168.0.20/24: MakeCLI 1 3 192.168.0. 19 /24
+- *PADD()*
  
 
 
