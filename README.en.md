@@ -1,8 +1,6 @@
 # WHAT IS THIS and How does it work?
 
-This is an attempt to replicate the way Docker containers are launched in Kubernetes using custom scripts and libraries that use `veth` and **OVS (Open vSwitch)** virtual switches, so as not to depend on Docker's default network system.
-
-It's perfect for **SMR**, **ASIR** (official Spanish technical certifications in IT) labs, or experiments. 
+This is an attempt to replicate the way Docker containers are launched in Kubernetes using custom scripts and libraries that use `veth` and **OVS (Open vSwitch)** virtual switches, so as not to depend on Docker's default network system. It's perfect for **SMR**, **ASIR** (Spanish certifications) labs, or experiments.
 
 It can be considered a **working framework**. It was designed in 2 days during my summer holidays, and I plan to improve it, but I don't want to spend too much time on it. It's not meant for production environments, as it barely has tools to audit the labs and lacks a logging and security system. Correct operation is the **sole responsibility of the user**.
 
@@ -74,7 +72,7 @@ From now on, we'll consider this library as the **Network Framework**.
   - `$2` — Container
   - `$3` — Interface name
   - `$4` — IP + NETMASK (optional). `DHCP4` is also valid, which currently does nothing but specifies and returns a variable indicating that the container wants DHCP4.
-  
+
   The function returns the following data:
   - `dev`: Name of the network device on the host.
   - `dev2`: Name of the network device inside the container.
@@ -101,6 +99,12 @@ From now on, we'll consider this library as the **Network Framework**.
   An extremely simple function, made for lazy people who don't want to type `docker exec`. Honestly, the one I've used the most at the OS level.
   - `$1`: Container
   - `$2`: Command
+
+---
+
+## LABS and DOCKER_FILES
+
+The `LABS` directory contains some examples of how I've used the tool, along with the Dockerfiles in the `DOCKER_FILES` folder.
 
 ---
 
