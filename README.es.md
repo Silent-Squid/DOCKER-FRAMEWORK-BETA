@@ -9,6 +9,8 @@ es de responsabilidad exclusiva del usuario.
 Las redes de momento solo soportan IPv4. Tal vez en un futuro me plantee diseñarlo también para IPv6 solo que para trabajar en laboratorios me parece un dolor de cabeza IPv6, aunque claro
 tiene mejoras significativass y va a haber casos en los que se trabajará en IPv6. Lo valoraré...
 
+Otra manera de calificar esto puede ser... Mi juguete de laboratorio personal :3
+
 **¿Cuantos contenedores se pueden lanzar en un mismo archivo?**:
 
 La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, incluso lanzando 12 y configurando las redes de
