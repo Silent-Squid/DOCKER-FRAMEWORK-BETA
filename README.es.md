@@ -1,6 +1,6 @@
 # ¿QUÉ ES ESTO y Cómo funciona?
 Esto es un intento de replicar la manera de lanzar contenedores de docker en kubernetes utilizando scripts y librerias propias para utilizar veth y
-los switches virtuales de OVS (OpenVSwitch) para no depender del sistema de redes default en docker. Perfecto para laboratorios de SMR, ASIR o experimentos.
+los switches virtuales de OVS (OpenVSwitch) para no depender del sistema de redes default en docker. Perfecto para laboratorios de SMR, ASIR (Certificaciones españolas) o experimentos.
 
 Se puede considerar un Framework de trabajo, fue diseñado en 2 días en mis vacaciones de verano y tengo pensado en mejorarlo, pero tampoco le quiero dedicar demasiado tiempo,
 no está pensado para entornos de producción, ya que apenas tiene herramientas para auditar los laboratorios y carece de un sistema de logs y seguridad. El funcionamiento correcto
@@ -79,6 +79,9 @@ Explicaré como funciona cada función de la librería
 : Una función extremadamente simple, hecha para vagos que no quieren escribir docker exec. Sinceramente, la que más he usado a nivel de sistema operativo.
   - $1 Contenedor
   - $2 *Comando*
+
+ # LABS y DOCKER_FILES
+ El directorio LABS contiene algunos ejemplos de cómo yo he utilizado la herramienta junto a los Dockerfiles en la carpeta DOCKER_FILES
  
 
 
