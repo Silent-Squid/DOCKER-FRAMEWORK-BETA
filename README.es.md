@@ -11,6 +11,9 @@ tiene mejoras significativas y va a haber casos en los que se trabajará en IPv6
 
 Otra manera de calificar esto puede ser... Mi juguete de laboratorio personal :3
 
+Es muy muy crudo utiliza exclusivamente scripts, se que podría diseñar un sistema con un arhcivo yaml que recoja todas las configuraciones como hace docker por defecto, Pero como quería utilizar OVS y las redes por defecto de docker dan bastante asco para trabajar en redes he recurrido a esto
+tampoco me queria meter mucho en Kubernetes así que simplemente cree esto en 2 días
+
 **¿Cuantos contenedores se pueden lanzar en un mismo archivo?**:
 
 La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, incluso lanzando 12 y configurando las redes de manera automática
