@@ -7,14 +7,13 @@ no está pensado para entornos de producción, ya que apenas tiene herramientas 
 es de responsabilidad exclusiva del usuario. 
 
 Las redes de momento solo soportan IPv4. Tal vez en un futuro me plantee diseñarlo también para IPv6 solo que para trabajar en laboratorios me parece un dolor de cabeza IPv6, aunque claro
-tiene mejoras significativass y va a haber casos en los que se trabajará en IPv6. Lo valoraré...
+tiene mejoras significativas y va a haber casos en los que se trabajará en IPv6. Lo valoraré...
 
 Otra manera de calificar esto puede ser... Mi juguete de laboratorio personal :3
 
 **¿Cuantos contenedores se pueden lanzar en un mismo archivo?**:
 
-La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, incluso lanzando 12 y configurando las redes de
-manera completamente 
+La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, incluso lanzando 12 y configurando las redes de manera automática
 
 ## ¿Cómo funciona?
 En el directorio */Script* tenemos todos los archivos que nos van a hacer falta para lanzar el script, yo los he separado en 3:
@@ -41,7 +40,7 @@ lo más importante de este proyecto es la librería en sí, ya que todo lo demá
 
 Explicaré como funciona cada función de la librería 
 - *random()*
-: Esta función genera un string de 4 caracteres de los cuales van de la A-Z a-z 0-9, es utilizada en otras funciones para generar "identificadores únicos" para utilizar.
+: Esta función genera un string de 4 caracteres de los cuales van de la A-Z, a-z, 0-9. Es utilizada en otras funciones para generar identificadores únicos
 
 - *RunDocker()*
 : Esta es una de las funciones principales, lanza un contenedor de docker utilizando sus parámetros $1 y $2 donde $1 = nombre y $2 = imagen docker. La configuración específica es
@@ -67,9 +66,9 @@ Explicaré como funciona cada función de la librería
 : Es una función pensada para lanzar de manera masiva contenedores "clientes" con una configuración de red igual.
 
   - $1 y $2 rango, del 1 al 5 MakeCLI 1 5 crea 5 contenedores (clientes)
-  - $3 Es la direccion de red sin el último dígito, es decir si la red es 192.168.0.0 debera escribirse 192.168.0.
+  - $3 Es la direccion de red sin el último dígito, es decir si la red es 192.168.0.0 deberá escribirse 192.168.0.
   - $4 Es el rango desde el que se empezará a colocar las IP, si colocas 9 empezará a partir de 10, esto está hecho para dejar siempre una IP para un servidor o cualquier otro dispositivo. 
-  - $5 Es la máscara de red colocado en el formato CIDR (/16, /24...)
+  - $5 Es la máscara de red en el formato CIDR (/16, /24...)
     - Un ejemplo de 3 clientes con a partir de la 192.168.0.20/24: MakeCLI 1 3 192.168.0. 19 /24
 - *PADD()*
 :Es una función simple para añadir un puerto a un vswitch de openVSwitch
