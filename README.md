@@ -1,6 +1,7 @@
-# ENGLISH README: 
-[Read in English](README.en.md)
-# README EN ESPAÑOL: 
-README.es.md
- 
-I'm really sorry but my russian isn't good enought for writting myself a readme in russian. I didn't wan't to add it with an AI traslation too so, Извините меня <3
+# [Read in English](README.en.md)
+
+# [Lee la documentación](README.es.md)
+
+# [Читать на русском] (README.ru.md)
+
+I'm really sorry to all russian speakers reeading this, but my russian isn't good enought for writting myself a readme in russian. I use deep seek for the transtalation. Извините меня <3
