@@ -6,5 +6,5 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 
 ## [0.1.0] - 2026-09-13
 
-### Added
+### Novedades
 - El proyecto se ha hecho público como **BETA**.
