@@ -1,5 +1,5 @@
 # ¿QUÉ ES ESTO y Cómo funciona?
-Esto es un intento de replicar la manera de lanzar contenedores de docker en kubernetes utilizando script y librerias propias para utilizar veth y
+Esto es un intento de replicar la manera de lanzar contenedores de docker en kubernetes utilizando scripts y librerias propias para utilizar veth y
 los switches virtuales de OVS (OpenVSwitch) para no depender del sistema de redes default en docker. Perfecto para laboratorios de SMR, ASIR o experimentos.
 
 Se puede considerar un Framework de trabajo, fue diseñado en 2 días en mis vacaciones de verano y tengo pensado en mejorarlo, pero tampoco le quiero dedicar demasiado tiempo,
@@ -7,11 +7,11 @@ no está pensado para entornos de producción, ya que apenas tiene herramientas 
 es de responsabilidad exclusiva del usuario. 
 
 Las redes de momento solo soportan IPv4. Tal vez en un futuro me plantee diseñarlo también para IPv6 solo que para trabajar en laboratorios me parece un dolor de cabeza IPv6, aunque claro
-tiene mejoras singnificativas y va a haber casos en los que se trabajará en IPv6. Barajaré la opción.
+tiene mejoras significativass y va a haber casos en los que se trabajará en IPv6. Lo valoraré...
 
 **¿Cuantos contenedores se pueden lanzar en un mismo archivo?**:
 
-La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, icluso lanzando 12 y configurando las redes de
+La respuesta a esta pregunta es, todos los que docker y tu sistema te permitan, no he encontrado ninguna limitación, incluso lanzando 12 y configurando las redes de
 manera completamente 
 
 ## ¿Cómo funciona?
@@ -26,15 +26,15 @@ En el directorio */Script* tenemos todos los archivos que nos van a hacer falta 
 Este va a ser el archivo donde se lanzarán los contenedores y switches que se deseen
 
 ## network.sh
-Este va a ser el archivo donde sde configurarán las redes y los virtual-switches 
+Este va a ser el archivo donde se configurarán las redes y los virtual-switches 
 
 ## Depuracion.sh
-Este archivo debe ser configurado para destruir los contenedores y los switches creados con RunDocker. Los veths asignados a los contenedores serán **automaticamente
+Este archivo debe ser configurado para destruir los contenedores y los switches creados con RunDocker. Los veths asignados a los contenedores serán **automáticamente
 borrados** por el sistema.
 
 
 # Libreria lib-01.sh
-Es una librería fundamental para el sistema de script, en ella están todas las funciones necesarias y que se utilizarán en los scripts creados con este sistema. De hecho, 
+Es una librería fundamental para el sistema de scripts, en ella están todas las funciones necesarias y que se utilizarán en los scripts creados con este sistema. De hecho, 
 lo más importante de este proyecto es la librería en sí, ya que todo lo demás son laboratorios. A partir de ahora consideraremos esta librería como el **Framework de redes**
 
 Explicaré como funciona cada función de la librería 
