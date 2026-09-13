@@ -74,6 +74,10 @@ Explicaré como funciona cada función de la librería
   - $1 Switch
   - $2 Interfaz 
   - $3 *"Configuración extra"*
+- *DOXE()*
+: Una función extremadamente simple, hecha para vagos que no quieren escribir docker exec. Sinceramente, la que más he usado a nivel de sistema operativo.
+  - $1 Contenedor
+  - $2 *Comando*
  
 
 
