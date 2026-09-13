@@ -8,6 +8,8 @@ The networks currently only support **IPv4**. Maybe in the future I'll consider 
 
 Another way to describe this could be... **My personal lab toy :3**
 
+It's very, very raw. It uses only scripts. I know I could design a system with a YAML file that gathers all the configurations, like Docker does by default. But since I wanted to use OVS, and Docker's default networks are pretty nasty for working with networks, I went with this. I also didn't want to get too deep into Kubernetes, so I just built this in 2 days.
+
 ---
 
 ## How many containers can be launched in a single file?
