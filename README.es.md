@@ -70,6 +70,10 @@ Explicaré como funciona cada función de la librería
   - $5 Es la máscara de red colocado en el formato CIDR (/16, /24...)
     - Un ejemplo de 3 clientes con a partir de la 192.168.0.20/24: MakeCLI 1 3 192.168.0. 19 /24
 - *PADD()*
+:Es una función simple para añadir un puerto a un vswitch de openVSwitch
+  - $1 Switch
+  - $2 Interfaz 
+  - $3 *"Configuración extra"*
  
 
 
