@@ -27,7 +27,7 @@ borrados** por el sistema.
 
 ## Libreria lib-01.sh
 Es una librería fundamental para el sistema de script, en ella están todas las funciones necesarias y que se utilizarán en los scripts creados con este sistema. De hecho, 
-lo más importante de este proyecto es la librería en sí, ya que todo lo demás son laboratorios.
+lo más importante de este proyecto es la librería en sí, ya que todo lo demás son laboratorios. A partir de ahora consideraremos esta librería como el **Framework de redes**
 
 
 # DOCS De otras herramientas utilizadas: 
