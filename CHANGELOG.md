@@ -1,9 +1,8 @@
 # Changelog
 
 Todos los cambios notables de este proyecto serán documentados en este archivo.
-El formato está basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
-## [Unreleased]
+## [BETA]
 
 ## [0.1.0] - 2026-09-13
 
